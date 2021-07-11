@@ -24,16 +24,14 @@ Actually available:
         * We can also add this config to our package.json to autoformat code on each git commit:
         ```json
         "scripts": {
-            ...
+            //...
             "lint": "prettier --check .",
             "format": "prettier --write ."
         },
         "husky": {
             "hooks": {
-            "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
-            "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
-            "post-applypatch": "echo \"[Husky] post-applypatch\"",
-            "pre-commit": "echo \"[Husky] pre-commit\" && lint-staged"
+                //...
+                "pre-commit": "echo \"[Husky] pre-commit\" && lint-staged"
             }
         },
         "lint-staged": {
@@ -52,16 +50,14 @@ Actually available:
         * We can also add this config to our package.json to autoformat code on each git commit:
         ```json
         "scripts": {
-            ...
+            //...
             "lint": "prettier --check .",
             "format": "prettier --write ."
         },
         "husky": {
             "hooks": {
-            "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
-            "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
-            "post-applypatch": "echo \"[Husky] post-applypatch\"",
-            "pre-commit": "echo \"[Husky] pre-commit\" && lint-staged"
+                //...
+                "pre-commit": "echo \"[Husky] pre-commit\" && lint-staged"
             }
         },
         "lint-staged": {
