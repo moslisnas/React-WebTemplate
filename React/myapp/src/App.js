@@ -1,4 +1,4 @@
-import './base.css';
+import './globals.css';
 
 function App() {
   return (

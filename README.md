@@ -1,11 +1,11 @@
 # React-WebTemplate
 React web project templates.
 
-This project can be used to generate your own application.
+This project can be used to generate your own applications.
 
 Actually available:
-* React v17.0.2 (latest version at 11/07/2021)
-* React vX.X.X with Next.js
+* React v17.0.2 - latest version at 11/07/2021
+* React v17.0.2 with Next.js - latest version at 11/07/2021
 
 ## React latest version
 ### React latest version install:
@@ -18,10 +18,57 @@ Actually available:
 * Configure TypeScript: `npm install --save typescript @types/node @types/react @types/react-dom @types/jest`
 * Plugins:
     1. For API calls - axios: `npm install --save axios`
+    2. For code format: `npm install prettier --save-dev`
+        * Prettier allows you to set up a .prettierignore file right inside of the root of the project next to package.json, that allows you to tell Prettier what files it should not run on.
+    3. For code debug: `npm install --save husky`
+        * We can also add this config to our package.json to autoformat code on each git commit:
+        ```json
+        "scripts": {
+            ...
+            "lint": "prettier --check .",
+            "format": "prettier --write ."
+        },
+        "husky": {
+            "hooks": {
+            "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
+            "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
+            "post-applypatch": "echo \"[Husky] post-applypatch\"",
+            "pre-commit": "echo \"[Husky] pre-commit\" && lint-staged"
+            }
+        },
+        "lint-staged": {
+            "*": "prettier --write"
+        }```
 * Clean project vulnerabilities: `npm audit` and `npm audit fix`
 
-## React vX.X.X with Next.js
-TO DO
+## React with Next.js
+### React with Next install:
+* Create project & configure TypeScript: `npx create-next-app --typescript <project_name>`
+* Plugins:
+    1. For API calls - axios: `npm install --save axios`
+    2. For code format: `npm install prettier --save-dev`
+        * Prettier allows you to set up a .prettierignore file right inside of the root of the project next to package.json, that allows you to tell Prettier what files it should not run on.
+    3. For code debug: `npm install --save husky`
+        * We can also add this config to our package.json to autoformat code on each git commit:
+        ```json
+        "scripts": {
+            ...
+            "lint": "prettier --check .",
+            "format": "prettier --write ."
+        },
+        "husky": {
+            "hooks": {
+            "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
+            "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
+            "post-applypatch": "echo \"[Husky] post-applypatch\"",
+            "pre-commit": "echo \"[Husky] pre-commit\" && lint-staged"
+            }
+        },
+        "lint-staged": {
+            "*": "prettier --write"
+        }```
+* Clean project vulnerabilities: `npm audit` and `npm audit fix`
 
-## Helper commands
+## Helper commands and utilities
 * View react version: `npm view react version` and `npm view react-native version`
+* Install Prettier as extension.
