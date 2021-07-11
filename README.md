@@ -36,7 +36,8 @@ Actually available:
         },
         "lint-staged": {
             "*": "prettier --write"
-        }```
+        }
+        ```
 * Clean project vulnerabilities: `npm audit` and `npm audit fix`
 
 ## React with Next.js
@@ -62,7 +63,8 @@ Actually available:
         },
         "lint-staged": {
             "*": "prettier --write"
-        }```
+        }
+        ```
 * Clean project vulnerabilities: `npm audit` and `npm audit fix`
 
 ## Helper commands and utilities
