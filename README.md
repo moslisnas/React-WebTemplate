@@ -24,13 +24,11 @@ Actually available:
         * We can also add this config to our package.json to autoformat code on each git commit:
         ```json
         "scripts": {
-            //...
             "lint": "prettier --check .",
             "format": "prettier --write ."
         },
         "husky": {
             "hooks": {
-                //...
                 "pre-commit": "echo \"[Husky] pre-commit\" && lint-staged"
             }
         },
@@ -51,13 +49,11 @@ Actually available:
         * We can also add this config to our package.json to autoformat code on each git commit:
         ```json
         "scripts": {
-            //...
             "lint": "prettier --check .",
             "format": "prettier --write ."
         },
         "husky": {
             "hooks": {
-                //...
                 "pre-commit": "echo \"[Husky] pre-commit\" && lint-staged"
             }
         },
