@@ -93,4 +93,4 @@ Actually available:
 
 ## Helper commands and utilities
 * View react version: `npm view react version` and `npm view react-native version`
-* Install Prettier as extension.
+* At Visual Studio Code - install Prettier as extension.
