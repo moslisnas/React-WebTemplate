@@ -8,19 +8,37 @@ Actually available:
 * React v17.0.2 with Next.js - latest version at 11/07/2021
 
 ### React global install:
-* First we install node from this link: https://nodejs.org/dist/v14.17.3/node-v14.17.3-x64.msi
-* Global installation:
-    1. npx: `npm install -g npx`
+1. We install node from this link: https://nodejs.org/dist
+2. npx package let us build a React project easily:
+```
+npm install -g npx
+```
 
 ## React latest version
 ### React latest version config:
-* Create project: `npx create-react-app <project_name>`
-* Configure TypeScript: `npm install --save typescript @types/node @types/react @types/react-dom @types/jest`
+* Create project: 
+    ```
+    npx create-react-app <project_name>
+    ```
+* Configure TypeScript: 
+    ```
+    npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+    ```
 * Plugins:
-    1. For API calls - axios: `npm install --save axios`
-    2. For code format: `npm install prettier --save-dev`
+    1. For API calls - axios: 
+    ```
+    npm install --save axios
+    ```
+    2. For code format:
+        ```
+        npm install prettier --save-dev
+        ```
         * Prettier allows you to set up a .prettierignore file right inside of the root of the project next to package.json, that allows you to tell Prettier what files it should not run on.
-    3. For code debug: `npm install --save husky` and `npm install eslint eslint-plugin-react --save-dev`
+    3. For code debug:
+        ```
+        npm install --save husky
+        npm install eslint eslint-plugin-react --save-dev
+        ```
         * We can also add this config to our package.json to autoformat code on each git commit:
         ```json
         "scripts": {
@@ -50,47 +68,86 @@ Actually available:
                 "lint": "eslint src/**/*.js src/**/*.jsx src/**/*.ts src/**/*.tsx"
             }
             ```
-* Clean project vulnerabilities: `npm audit` and `npm audit fix`
+* Clean project vulnerabilities:
+    ```
+    npm audit
+    npm audit fix
+    ```
 
 ## React with Next.js
 ### React with Next config:
-* Create project & configure TypeScript: `npx create-next-app --typescript <project_name>`
+* Create project & configure TypeScript:
+    ```
+    npx create-next-app --typescript <project_name>
+    ```
 * Plugins:
-    1. For API calls - axios: `npm install --save axios`
-    2. For code format: `npm install prettier --save-dev`
-        * Prettier allows you to set up a .prettierignore file right inside of the root of the project next to package.json, that allows you to tell Prettier what files it should not run on.
-    3. For code debug: `npm install --save husky` and `npm install eslint eslint-plugin-react --save-dev`
-        * We can also add this config to our package.json to autoformat code on each git commit:
-        ```json
-        "scripts": {
-            "lint": "prettier --check .",
-            "format": "prettier --write ."
-        },
-        "husky": {
-            "hooks": {
-                "pre-commit": "echo \"[Husky] pre-commit\" && lint-staged"
-            }
-        },
-        "lint-staged": {
-            "*": "prettier --write"
-        }
+    1. For code format:
         ```
-        * Same for es-lint:
-            * .eslintrc:
-            ```json
-            "extends": [
-                "eslint:recommended",
-                "plugin:react/recommended"
-            ]
-            ```
-            * package.json:
+        npm install prettier --save-dev
+        ```
+        * Prettier allows you to set up a .prettierignore file right inside of the root of the project next to package.json, that allows you to tell Prettier what files it should not run on.
+    2. For code debug:
+        ```
+        npm install --save husky
+        npm install eslint eslint-plugin-react --save-dev
+        ```
+        * We can also add this config to our package.json to autoformat code on each git commit:
             ```json
             "scripts": {
-                "lint": "eslint ./**/*.ts ./**/*.tsx"
+                "lint": "prettier --check .",
+                "format": "prettier --write ."
+            },
+            "husky": {
+                "hooks": {
+                    "pre-commit": "echo \"[Husky] pre-commit\" && lint-staged"
+                }
+            },
+            "lint-staged": {
+                "*": "prettier --write"
             }
             ```
-* Clean project vulnerabilities: `npm audit` and `npm audit fix`
+        * Same for es-lint:
+            * .eslintrc:
+                ```json
+                "extends": [
+                    "eslint:recommended",
+                    "plugin:react/recommended"
+                ]
+                ```
+            * package.json:
+                ```json
+                "scripts": {
+                    "lint": "eslint ./**/*.ts ./**/*.tsx"
+                }
+                ```
+    3. Optionals:
+        * For API calls - axios:
+            ```
+            npm install --save axios
+            ```
+        * CSS and styling (PENDING):
+            ```
+            npm install --save ?
+            ```
+        * Session (PENDING):
+            ```
+            npm install --save ?
+            ```
+### React with Next run and utils commands:
+* Run project:
+    ```
+    npm run dev
+    ```
+* Clean project vulnerabilities:
+    ```
+    npm audit
+    npm audit fix
+    ```
 
 ## Helper commands and utilities
-* View react version: `npm view react version` and `npm view react-native version`
+* View react version:
+    ```
+    npm view react version
+    npm view react-native version
+    ```
 * At Visual Studio Code - install Prettier as extension.
