@@ -125,14 +125,44 @@ npm install -g npx
             ```
             npm install --save axios
             ```
-        * CSS and styling (PENDING):
-            ```
-            npm install --save ?
-            ```
+        * CSS and styling:
+            1. Styled-components:
+                ```
+                npm install --save styled-components
+                ```
+            2. Tailwind:
+                ```
+                npm install --save tailwindcss
+                ```
         * Session (PENDING):
             ```
             npm install --save ?
             ```
+* Additional util configuration:
+    1. Reduce import statements to a base path, change tsconfig.json:
+        * Specify base URL:
+            ```json
+            {
+                "compilerOptions": {
+                    ...
+                    "baseUrl": "."
+                }
+            }
+            ```
+        * Reduce imports for a specific directory:
+            ```json
+            {
+                "compilerOptions": {
+                    ...
+                    "paths": {
+                        "@/components/*": ["components/*"],
+                        "@/styles/*": ["styles/*"]
+                    }
+                }
+            }
+            ```
+
+
 ### React with Next run and utils commands:
 * Run project:
     ```
