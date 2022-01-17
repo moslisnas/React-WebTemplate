@@ -166,6 +166,13 @@ npm install -g npx
                     }
                 }
                 ```
+                To avoid console warnings on className of styled-components elements we need to add in the project main folder the ".babelrc" file with this content:
+                ```json
+                {
+                    "presets": ["next/babel"],
+                    "plugins": [["styled-components", { "ssr": true }]]
+                }
+                ```
 
             2. Tailwind:
                 ```
